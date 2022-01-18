@@ -22,7 +22,7 @@ services:
         volumes: 
             - "/var/run/docker.sock:/var/run/docker.sock"
         deploy:
-            placements:
+            placement:
                 constraints: [node.role == manager]
         networks: 
             - webnet
