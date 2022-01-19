@@ -38,5 +38,6 @@ services:
         command: redis-server --appendonly yes
         networks: 
             - webnet
+networks: 
     webnet:
 
