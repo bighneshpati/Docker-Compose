@@ -31,13 +31,12 @@ services:
         ports: 
             - "6379:6379"
         volumes: 
-            - "/home/docker/data:/data"
+            - "./data:/data"
         deploy:
             placement:
                 constraints: [node.role==manager]
         command: redis-server --appendonly yes
         networks: 
             - webnet
-networks: 
     webnet:
 
